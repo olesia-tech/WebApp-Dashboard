@@ -30,6 +30,16 @@
 .navigation {
   grid-area: navigation;
 }
+h3:not(.header-name){
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
 
 
 
@@ -84,8 +94,8 @@
   margin-bottom: 16px;
 }
  .header-name {
-font-weight: lighter;
-font-size: smaller;
+font-size: 14px;
+font-weight: 400;
 }
 
 
@@ -122,7 +132,7 @@ font-size: smaller;
 }
 
 .widget-container-full, .widget-container-half {
-  width: 95vw;
+  width: 100%;
   }
 
   .main-header {
@@ -131,9 +141,10 @@ font-size: smaller;
    }
   
    .headline {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     background-color: white;
+    font-weight: 500;
+    font-size: 16px;
    }
    
 
@@ -142,6 +153,34 @@ font-size: smaller;
     margin-bottom: 30px;
   }
 
+  .traffic-header {
+    display: flex;
+    flex-direction: column;
+  } 
+
+  
+
+  .traffic-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+    }
+
+  .traffic-nav li {
+    margin-right: 10px;
+  }
+  .traffic-nav li:last-child {
+    margin-right: 0;
+  }
+  .traffic-nav-link {
+   border-radius: 15px;
+  }
+  .traffic-nav-link:hover {
+    background-color: green;
+    color: white;
+
+  }
 /*=========================
             SVG
 ==========================*/
@@ -152,20 +191,72 @@ font-size: smaller;
         SOCIAL STATS
 ==========================*/
 
+.social-container {
+display: flex;
+align-items: center;
+border-style: solid;
+border-radius: 5px;
+margin: 12px;
+}
+
 .social-image {
   width: 26px;
   height: 26px;
+  margin: 10px;
+}
+
+.social-text {
+ margin-top: 5px;
 }
 /*==========================================
         NEW MEMBERS AND RECENT ACTIVITY
 ===========================================*/
+.members img, 
+.activity img {
+  width: 20%;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.members-container,
+.members-text,
+.activity-container,
+.activity-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.members-container,
+.activity-container {
+  margin: 18px;
+  border-bottom:  1px solid;
+}
 
 
 /*=========================
        MESSAGE USER
 ==========================*/
+.widget-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
 
+.form-field,
+.form-area {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
 
+.button-primary {
+  width: 95%;
+  padding: 10px;
+}
 /*=========================
        SETTINGS
 ==========================*/
@@ -183,8 +274,34 @@ font-size: smaller;
     "header header"
     "navigation main";
   }
+
+
+.traffic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.traffic-header h3 {
+  margin: 0;
+}
+
+.traffic-nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.traffic-nav li {
+  margin-right: 10px;
+}
+
+.traffic-nav li:last-child {
+ margin-right: 0;
+}
+}
 @media (min-width: 768px) {
   .main {
     grid-template-columns: 50%;
