@@ -30,15 +30,13 @@
 
 
   <nav class="navigation">
-  
     <ul>
       <li><a href="#"><img src="web_app_dashboard_v3.2/svgs/home.svg" alt="Home icon"></a></li>
       <li><a href="#"><img src="web_app_dashboard_v3.2/svgs/bar-chart.svg" alt="Bar-chart icon"></a></li>
       <li><a href="#"><img src="web_app_dashboard_v3.2/svgs/members.svg" alt="Members icon"></a></li>
       <li><a href="#"><img src="web_app_dashboard_v3.2/svgs/settings.svg" alt="Settings icon"></a></li>
     </ul>
-   
-  </nav>
+   </nav>
 
 
   <main class="main">
@@ -227,14 +225,15 @@
 
 
             <!-- local settings widget -->
+            <h3>Settings</h3>
         <section class="settings">
-              <h3>Settings</h3>
               <!-- First toggle switch-->
               <div class="toggle-container">
                 <p class="toggle-text">Send Email Notification</p>
                <label class="toggle-switch">
                 <input id="toggle-switch-1" type="checkbox" name="toggle-switch">
                 <span class="slider"></span>
+                
                </label>
               </div>
 
@@ -244,8 +243,10 @@
                 <label class="toggle-switch">
                 <input class="toggle-switch" id="toggle-switch-2" type="checkbox" name="toggle-switch">
                 <span class="slider"></span>
+                
                 </label>
               </div>
+             
              
               <select class="form-field" id="timezone">
                   <option disabled selected>Select a Timezone</option>
@@ -263,6 +264,7 @@
                 <button class="button-primary" id="save">Save</button>
                 <button class="button-disabled" id="cancel">Cancel</button>
             </div>
+           
         </section>
 
     </main>
