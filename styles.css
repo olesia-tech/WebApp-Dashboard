@@ -52,7 +52,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(127, 225, 255);
+  background-color: #AAB0E4;
  
 }
 
@@ -132,7 +132,7 @@ font-weight: 400;
 }
 
 .navigation {
-  background-color: aqua;
+  background-color: #7477BF;
  }
 
   
@@ -151,6 +151,7 @@ font-weight: 400;
   .main-header {
     display: flex;
    background-color: lightgray;
+   
    }
   
    .headline {
@@ -162,8 +163,13 @@ font-weight: 400;
    
 
   .alert {
+    display: flex;
+    align-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    background-color: #7477BF;
+    justify-content: space-between;
+    border-radius: 5px;
   }
 
   .traffic-header {
@@ -190,7 +196,7 @@ font-weight: 400;
    border-radius: 15px;
   }
   .traffic-nav-link:hover {
-    background-color: green;
+    background-color: #78CF82;
     color: white;
 
   }
@@ -216,10 +222,25 @@ margin: 12px;
   width: 26px;
   height: 26px;
   margin: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #7477BF;
+  padding: 5px;
+  box-sizing: content-box;
+}
+.social-image svg {
+  fill: white;
 }
 
 .social-text {
  margin-top: 5px;
+}
+
+.social-text p:first-child {
+  color:#595b92
+}
+.social-text p:nth-child(2) {
+  color: rgb(100, 100, 100);
 }
 /*==========================================
         NEW MEMBERS AND RECENT ACTIVITY
