@@ -11,6 +11,7 @@
 
   <header class="header">
     <div class="header-container">
+      <div class="logo-bell">
     <h1 class="logo">
       <span class="bold">Web</span><span class="slim">App&trade;</span></h1>
     <div class="bell-icon">
@@ -20,7 +21,7 @@
     </div>
      <!--(container element for our notifications)-->
     <div id="notifications"></div>
-
+</div>
     <div class="profile">
      <img class="profile-picture" src="web_app_dashboard_v3.2/images/member-1.jpg" alt="Photo Of A Student">
      <h3 class="header-name">Student Name</h3>
@@ -225,8 +226,9 @@
 
 
             <!-- local settings widget -->
+            <section class="settings">
             <h3>Settings</h3>
-        <section class="settings">
+    <form class="widget-container">
               <!-- First toggle switch-->
               <div class="toggle-container">
                 <p class="toggle-text">Send Email Notification</p>
@@ -248,6 +250,7 @@
               </div>
              
              
+             
               <select class="form-field" id="timezone">
                   <option disabled selected>Select a Timezone</option>
                   <option value="Eastern">Eastern</option>
@@ -264,7 +267,7 @@
                 <button class="button-primary" id="save">Save</button>
                 <button class="button-disabled" id="cancel">Cancel</button>
             </div>
-           
+           </form>
         </section>
 
     </main>

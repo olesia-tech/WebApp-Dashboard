@@ -40,7 +40,9 @@ h3:not(.header-name){
   letter-spacing: -0.5px;
 }
 
-
+a {
+  text-decoration: none;
+}
 
 
 /*=========================
@@ -70,18 +72,28 @@ h3:not(.header-name){
   font-weight:lighter;
   font-size: smaller;
  }
+.logo-bell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 8%;
+}
 
 .profile {
   display: flex;
   align-items: center;
-  margin-right: 25%;
+  justify-content: flex-end;
+  margin-right: 10px;
+  border-left: 1px solid black;
+
   }
 
   .profile-picture {
-    width: 15%;
+    width: 20%;
     height: auto;
     border-radius: 50%;
     margin-right: 12px;
+   
   }
 
 
@@ -89,9 +101,10 @@ h3:not(.header-name){
   width: 20px;
   height: 20px;
   margin-top: 24px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 25px;
+  margin-right: 12px;
   margin-bottom: 16px;
+  
 }
  .header-name {
 font-size: 14px;
@@ -228,8 +241,11 @@ margin: 12px;
   flex-direction: column;
   text-align: center;
 }
+
+
 .members-container,
 .activity-container {
+  padding-bottom: 18px;
   margin: 18px;
   border-bottom:  1px solid;
 }
@@ -238,8 +254,9 @@ margin: 12px;
 /*=========================
        MESSAGE USER
 ==========================*/
-.widget-container,
-.settings {
+.widget-container
+
+ {
   display: flex;
   align-items: center;
   flex-direction: column;
