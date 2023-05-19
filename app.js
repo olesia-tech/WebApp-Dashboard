@@ -7,7 +7,7 @@ const mobileCanvas = document.getElementById("mobile-chart");
 
 alertBanner.innerHTML = 
 `<div class="alert-banner">
-<p><strong>Alert:</strong> You have unread messages</p>
+<p>Alert: You have unread messages</p>
 <p class="alert-banner-close">x</p>
 </div>`;
 

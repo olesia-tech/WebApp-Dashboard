@@ -48,12 +48,16 @@ a {
 /*=========================
           HEADER
 ==========================*/
-.header-container {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #AAB0E4;
- 
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
 }
 
  .logo {
@@ -72,10 +76,9 @@ a {
   font-weight:lighter;
   font-size: smaller;
  }
-.logo-bell {
+.logo-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   margin-left: 8%;
 }
 
@@ -98,7 +101,7 @@ a {
 
 
 .bell-icon {
-  width: 20px;
+  width: 25px;
   height: 20px;
   margin-top: 24px;
   margin-left: 25px;
@@ -162,7 +165,7 @@ font-weight: 400;
    }
    
 
-  .alert {
+  .alert-banner {
     display: flex;
     align-items: center;
     margin-top: 30px;
@@ -170,7 +173,21 @@ font-weight: 400;
     background-color: #7477BF;
     justify-content: space-between;
     border-radius: 5px;
+    width: 95%;
+    margin-left: 8px;
+    color: white;
+    font-size: 14px;
   }
+
+  .alert-banner p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+  .alert-banner-close {
+   margin-right: 10px;
+    cursor: pointer;
+    }
 
   .traffic-header {
     display: flex;
@@ -296,6 +313,8 @@ margin: 12px;
 #send {
   width: 95%;
   padding: 10px;
+  background-color: #7477BF;
+  border-radius: 5px;
 }
 
 
@@ -372,9 +391,12 @@ input[type="checkbox"]:checked + .slider:before {
   flex-grow: 1;
   width: 50%;
   height: 40px;
+  border-radius: 5px;
 }
+
 .settings-button button:first-child {
   margin-right: 15px;
+  background-color: #7477BF;
 }
 
 /*=========================
@@ -396,33 +418,42 @@ input[type="checkbox"]:checked + .slider:before {
    justify-content: space-around;
   } 
 
-.traffic-header {
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / span 2;
+  }
+
+  .alert {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .alert-banner {
+    width: 97%;
+    margin-left: 10px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ .traffic-header {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  
+  width: 98%;
+ }
+ 
 }
 
-.traffic-header h3 {
-  margin: 0;
-}
 
-.traffic-nav {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.traffic-nav li {
-  margin-right: 10px;
-}
-
-.traffic-nav li:last-child {
- margin-right: 0;
-}
-}
 @media (min-width: 768px) {
   .main {
     grid-template-columns: 50%;
@@ -433,6 +464,7 @@ input[type="checkbox"]:checked + .slider:before {
   .traffic, .social {
   grid-column: 1 / span 2;
   }
+  
   }
 
   @media (min-width: 768px) {
