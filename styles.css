@@ -450,6 +450,10 @@ input[type="checkbox"]:checked + .slider:before {
   justify-content: space-between;
   width: 98%;
  }
+
+ .traffic {
+  margin-bottom: 20px;
+ }
  
 }
 
@@ -464,28 +468,96 @@ input[type="checkbox"]:checked + .slider:before {
   .traffic, .social {
   grid-column: 1 / span 2;
   }
-  
+
+  .social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
+
+  .social-container {
+    display: flex;
+    width: 100%;
+    background-color: #edecec;
+  }
+  
+  
+  
 
   @media (min-width: 768px) {
     .daily, .members, .message {
     grid-column: 1 / span 1;
     }
+   }
+   @media (min-width: 768px) {
+    .members,
+    .activity {
+      display: grid;
+      grid-column: span 2;
     }
+
+    .members-container,
+    .activity-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      
+    }
+    .members-container img,
+    .activity-container img {
+      width: 15%;
+      height: auto;
+      border-radius: 50%;
+     
+    }
+    
+    .members-text {
+      order: 1;
+    }
+  
+    .members-text p {
+      order: 2;
+    }
+
+    .members-text a {
+      order: 2;
+      font-weight: 100;
+    }
+    .members-container p {
+      order: 2;
+    }
+    .members-container p:last-child {
+      margin-left: auto;
+    }
+   
+   }
+   
+  
+
+
   
 
     @media (min-width: 768px) {
-      .mobile, .activity, .settings {
-      grid-column: 2 / span 1;
+      .mobile, .settings {
+      grid-column: 2 / span 1;}
+
+      
       }
-      }
+
+      
 
       @media (min-width: 768px) {
         .widget-container-full {
         width: 100%;
         }
+        
+        .widget-container-full.no-border-box {
+          box-sizing: content-box;
+        }
+
         .widget-container-half {
-        width: 50%;
+        width: 
         }
         }
 
