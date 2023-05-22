@@ -54,6 +54,7 @@ a {
   align-items: center;
   background-color: #AAB0E4;
   width: 100%;
+  color: white;
 }
 
 .header-container {
@@ -87,7 +88,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   margin-right: 10px;
-  border-left: 1px solid black;
+  border-left: 0.8px solid white;
 
   }
 
@@ -107,13 +108,14 @@ a {
   margin-left: 25px;
   margin-right: 12px;
   margin-bottom: 16px;
-  
 }
  .header-name {
 font-size: 14px;
 font-weight: 400;
 }
-
+.header svg {
+  fill: white;
+}
 
 
 /*=========================
@@ -137,7 +139,8 @@ font-weight: 400;
 .navigation {
   background-color: #7477BF;
  }
-
+ 
+ 
   
 
 /*=========================
@@ -148,13 +151,13 @@ font-weight: 400;
 }
 
 .widget-container-full, .widget-container-half {
-  width: 100%;
+  width: 99%;
   }
 
   .main-header {
     display: flex;
    background-color: lightgray;
-   
+  
    }
   
    .headline {
@@ -162,6 +165,7 @@ font-weight: 400;
     background-color: white;
     font-weight: 500;
     font-size: 16px;
+    
    }
    
 
@@ -192,9 +196,20 @@ font-weight: 400;
   .traffic-header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
   } 
 
-  
+  .traffic,
+  .daily,
+  .mobile,
+  .social,
+  .members,
+  .activity,
+  .message {
+    padding-bottom: 10px;
+   
+    border-bottom: 0.7px solid black ;
+  }
 
   .traffic-nav {
     display: flex;
@@ -204,7 +219,8 @@ font-weight: 400;
     }
 
   .traffic-nav li {
-    margin-right: 10px;
+    margin-right: 12px;
+    font-weight: 400;
   }
   .traffic-nav li:last-child {
     margin-right: 0;
@@ -217,9 +233,9 @@ font-weight: 400;
     color: white;
 
   }
-/*=========================
-            SVG
-==========================*/
+
+  
+ 
 
 
 
@@ -288,6 +304,19 @@ margin: 12px;
   border-bottom:  1px solid;
 }
 
+.members-container:last-child,
+.activity-container:last-child {
+  border-bottom: none;
+}
+
+.activity p{
+font-weight: 200;
+}
+
+.activity span {
+  font-weight: 400;
+}
+
 
 /*=========================
        MESSAGE USER
@@ -308,6 +337,9 @@ margin: 12px;
   padding: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #edecec;
+  border: 0.8px solid black;
 }
 
 #send {
@@ -315,6 +347,7 @@ margin: 12px;
   padding: 10px;
   background-color: #7477BF;
   border-radius: 5px;
+  border: 0.8px solid black;
 }
 
 
@@ -392,12 +425,19 @@ input[type="checkbox"]:checked + .slider:before {
   width: 50%;
   height: 40px;
   border-radius: 5px;
+  border: 0.8px solid black;
 }
 
 .settings-button button:first-child {
   margin-right: 15px;
   background-color: #7477BF;
 }
+
+.settings {
+  margin-bottom: 20px;
+}
+
+
 
 /*=========================
      MEDIA QUERIES 768px
@@ -412,11 +452,26 @@ input[type="checkbox"]:checked + .slider:before {
     "navigation main";
   }
 
+  .header {
+    color: white;
+    }
+
+    .header svg {
+      fill: white;
+    }
+
+    .profile {
+      border-left: 0.7px solid white;
+    }
+
   .navigation ul {
     display: grid;
    grid-template-columns: auto;
-   justify-content: space-around;
   } 
+
+  .navigation ul li {
+    margin-bottom: 20px;
+  }
 
   .main-header {
     display: flex;
@@ -479,14 +534,56 @@ input[type="checkbox"]:checked + .slider:before {
     display: flex;
     width: 100%;
     background-color: #edecec;
+    border: 0.7px solid black;
+    height: 65px;
+  }
+
+ 
+  .social-text p:first-child {
+    font-size: 14px; 
+  }
+  
+  .social-text p:nth-child(2) {
+    font-size: 20px; 
+    font-weight: 300;
+  }
+
+  .social-image {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 50%;
   }
   
   
   
 
   @media (min-width: 768px) {
-    .daily, .members, .message {
+    .daily, .members {
     grid-column: 1 / span 1;
+    }
+
+    
+
+    .message,
+    .settings {
+      display: grid;
+      grid-column: span 2;
+    }
+.settings {
+  margin-bottom: 20px;
+}
+
+    .toggle-container {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .toggle-text {
+      margin-right: 80px;
+    }
+    #toggle-text-2 {
+      margin-right: 102px;
     }
    }
    @media (min-width: 768px) {
@@ -524,13 +621,46 @@ input[type="checkbox"]:checked + .slider:before {
       order: 2;
       font-weight: 100;
     }
+
     .members-container p {
       order: 2;
     }
+
     .members-container p:last-child {
       margin-left: auto;
     }
-   
+
+    .members-text p {
+      margin-right: 122px;
+    }
+
+    .activity-text p:nth-child(2) {
+      margin-right: 300px;
+    }
+    .activity-container:nth-child(4) .activity-text p:nth-child(2) {
+    margin-right: 335px;
+    }
+    .activity-container:last-of-type .activity-text p:last-of-type {
+      margin-right: 206px;
+    }
+    
+#messageField {
+  margin-top: 20px;
+  height: 130px ;
+  border-top: 1px solid black;
+}
+.message input,
+.message textarea {
+  border-radius: 5px;
+  background-color:#edecec;
+}
+.message input {
+  border-top: 1px solid black;
+}
+#cancel {
+  background-color: #ccc;
+}
+
    }
    
   
@@ -539,7 +669,7 @@ input[type="checkbox"]:checked + .slider:before {
   
 
     @media (min-width: 768px) {
-      .mobile, .settings {
+      .mobile {
       grid-column: 2 / span 1;}
 
       
@@ -556,12 +686,25 @@ input[type="checkbox"]:checked + .slider:before {
           box-sizing: content-box;
         }
 
-        .widget-container-half {
-        width: 
-        }
+       
         }
 
 
 /*=========================
      MEDIA QUERIES 1024px
 ==========================*/
+@media (min-width: 1024px) {
+  .members,
+  .message {
+  grid-column: 1 / span 1;
+  }
+
+  .activity,
+  .settings {
+    grid-column: 2 /span 1;
+  }
+
+  .widget-container-full {
+    width: 100%;
+  }
+}
