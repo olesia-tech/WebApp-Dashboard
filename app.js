@@ -125,7 +125,8 @@ const dailyData = {
         const message = document.getElementById("messageField");
         const send = document.getElementById("send");
 
-        send.addEventListener('click', () => {
+        send.addEventListener('click', (event) => {
+          event.preventDefault();
           // ensure user and message fields are filled out
           if (user.value === "" && message.value === "") {
           alert("Please fill out user and message fields before sending");
