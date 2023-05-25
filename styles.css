@@ -52,13 +52,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #AAB0E4;
+  background-color:#7477BF;
   width: 100%;
   color: white;
 }
 
 .header-container {
   display: flex;
+  width: 50%;
 }
 
  .logo {
@@ -88,26 +89,28 @@ a {
   align-items: center;
   justify-content: flex-end;
   margin-right: 10px;
-  border-left: 0.8px solid white;
-
+  border-left: 0.7px solid white;
+  width: 45%;
+ 
   }
 
   .profile-picture {
     width: 20%;
     height: auto;
     border-radius: 50%;
-    margin-right: 12px;
-   
+    margin-right: 8px;
+    margin-left: 8px;
+    
   }
 
 
 .bell-icon {
-  width: 25px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-top: 24px;
-  margin-left: 25px;
+  margin-left: 35px;
   margin-right: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
  .header-name {
 font-size: 14px;
@@ -137,7 +140,7 @@ font-weight: 400;
 }
 
 .navigation {
-  background-color: #7477BF;
+  background-color:#595b92;
  }
  
  
@@ -246,9 +249,10 @@ font-weight: 400;
 .social-container {
 display: flex;
 align-items: center;
-border-style: solid;
+border: 0.7px solid black;
 border-radius: 5px;
 margin: 12px;
+background-color: #edecec;
 }
 
 .social-image {
@@ -301,7 +305,7 @@ margin: 12px;
 .activity-container {
   padding-bottom: 18px;
   margin: 18px;
-  border-bottom:  1px solid;
+  border-bottom:  0.7px solid;
 }
 
 .members-container:last-child,
@@ -312,6 +316,8 @@ margin: 12px;
 .activity p{
 font-weight: 200;
 }
+
+
 
 .activity span {
   font-weight: 400;
@@ -339,7 +345,7 @@ font-weight: 200;
   box-sizing: border-box;
   border-radius: 5px;
   background-color: #edecec;
-  border: 0.8px solid black;
+  border: 0.7px solid black;
 }
 
 #send {
@@ -347,7 +353,7 @@ font-weight: 200;
   padding: 10px;
   background-color: #7477BF;
   border-radius: 5px;
-  border: 0.8px solid black;
+  border: 0.7px solid black;
 }
 
 
@@ -425,7 +431,7 @@ input[type="checkbox"]:checked + .slider:before {
   width: 50%;
   height: 40px;
   border-radius: 5px;
-  border: 0.8px solid black;
+  border: 0.7px solid black;
 }
 
 .settings-button button:first-child {
@@ -452,16 +458,27 @@ input[type="checkbox"]:checked + .slider:before {
     "navigation main";
   }
 
-  .header {
-    color: white;
+    .header {
+      background-color:#7477BF;
+    }
+    .header-container {
+      width: 100%;
     }
 
-    .header svg {
-      fill: white;
+    .bell-icon {
+      margin-left: 450px;
+     
     }
 
     .profile {
       border-left: 0.7px solid white;
+      width: 25%;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 10px;
     }
 
   .navigation ul {
@@ -555,7 +572,7 @@ input[type="checkbox"]:checked + .slider:before {
     display: inline-block;
     border-radius: 50%;
   }
-  
+}
   
   
 
@@ -640,8 +657,13 @@ input[type="checkbox"]:checked + .slider:before {
     .activity-container:nth-child(4) .activity-text p:nth-child(2) {
     margin-right: 335px;
     }
-    .activity-container:last-of-type .activity-text p:last-of-type {
+    #activity-last {
       margin-right: 206px;
+      text-align: left;
+    }
+    #activity-last-p {
+      text-align: left;
+      margin-right: 350px;
     }
     
 #messageField {
@@ -698,13 +720,77 @@ input[type="checkbox"]:checked + .slider:before {
   .message {
   grid-column: 1 / span 1;
   }
+  
+  .bell-icon {
+    margin-left: 650px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .profile {
+    width: fit-content;
+  }
 
   .activity,
   .settings {
     grid-column: 2 /span 1;
   }
 
+  .activity-text {
+  text-align: left;
+  }
+
+  .activity-text p:nth-child(2) {
+    margin-right: 0;
+    padding-right: 275px;
+  }
+
+  .activity-container:nth-child(2) .activity-text p:nth-child(2) {
+    margin-right: 0;
+    padding-right: 285px;
+    }
+  
+  .activity-container:nth-child(4) .activity-text p:nth-child(2) {
+    margin-right: 0;
+    padding-right: 285px;
+    }
+
+    #activity-last {
+      margin-right: 0;
+      text-align: left;
+      padding-right: 44px;
+    }
+    #activity-last-p {
+      text-align: left;
+      margin-right: 0;
+      padding-right: 200px;
+    }
+
   .widget-container-full {
     width: 100%;
+  }
+  .settings h3 {
+    height: fit-content;
+  }
+
+  .toggle-container {
+    margin-bottom: 36px;
+    margin-top: 24px;
+  }
+  #toggle-container {
+   
+    margin-bottom: 37px;
+  }
+
+  #send {
+    height: 40px;
+  }
+  .members,
+  .message,
+  .daily {
+    border-right: 0.8px solid black;
+  }
+  .traffic {
+    margin-bottom: 0;
   }
 }
