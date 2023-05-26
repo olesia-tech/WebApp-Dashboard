@@ -138,3 +138,21 @@ const dailyData = {
           alert(`Message successfully sent to: ${user.value}`);
           }
           });
+
+          const notificationsContainer = document.querySelector('#notifications');
+          const bellIcon = document.querySelector('.bell-icon');
+
+          bellIcon.addEventListener('click', function() {
+            notificationsContainer.classList.toggle('active');
+            showNotification();
+          });
+
+          function showNotification() {
+            notificationsContainer.classList.add('active');
+          }
+
+          function hideNotification() {
+            notificationsContainer.classList.remove('active');
+          }
+
+          showNotification();
