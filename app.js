@@ -139,20 +139,19 @@ const dailyData = {
           }
           });
 
-          const notificationsContainer = document.querySelector('#notifications');
+
+          //Alert Notifications
+          const notificationsContainer = document.querySelector('.notifications');
           const bellIcon = document.querySelector('.bell-icon');
+          
 
           bellIcon.addEventListener('click', function() {
             notificationsContainer.classList.toggle('active');
-            showNotification();
           });
 
-          function showNotification() {
-            notificationsContainer.classList.add('active');
+          function hideNotification(notification) {
+            notification.parentElement.removeChild(notification);
           }
 
-          function hideNotification() {
-            notificationsContainer.classList.remove('active');
-          }
+     
 
-          showNotification();
