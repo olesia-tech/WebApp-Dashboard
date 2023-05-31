@@ -2,7 +2,7 @@ const alertBanner = document.getElementById('alert');
 const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
-
+const trafficNavLinks = document.querySelectorAll('.traffic-nav-link');
 
 
 alertBanner.innerHTML = 
@@ -17,7 +17,6 @@ alertBanner.addEventListener('click', e => {
   alertBanner.style.display = "none"
   }
   });
-
 
   // data for traffic line chart
   let trafficData = {
@@ -119,6 +118,11 @@ const dailyData = {
         data: mobileData,
         options: mobileOptions
         });
+
+
+
+ // Traffic Nav
+      
 
         // Messaging section 
         const user = document.getElementById("userField");

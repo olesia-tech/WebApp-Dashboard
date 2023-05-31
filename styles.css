@@ -59,7 +59,8 @@ a {
 
 .header-container {
   display: flex;
-  width: 50%;
+  width: 100%;
+  justify-content: space-between;
 }
 
  .logo {
@@ -113,6 +114,7 @@ a {
   margin-bottom: 18px;
   position: relative;
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .bell-icon:hover {
@@ -138,7 +140,7 @@ font-weight: 400;
   background-color: #4CAF50;
 }
 
-.notifications-container {
+/*.notifications-container {
   position: relative;
 }
 .notifications {
@@ -166,7 +168,7 @@ font-weight: 400;
 .notifications.active {
   display: block;
 }
-
+*/
 
 
 /*=========================
@@ -202,9 +204,11 @@ font-weight: 400;
   display: grid;
 }
 
-.widget-container-full, .widget-container-half {
+.widget-container-full,.widget-container-half {
   width: 99%;
   }
+
+  
 
   .main-header {
     display: flex;
@@ -270,9 +274,12 @@ font-weight: 400;
     justify-content: space-evenly;
     }
 
+  
+    
   .traffic-nav li {
     margin-right: 12px;
     font-weight: 400;
+    cursor: pointer;
   }
   .traffic-nav li:last-child {
     margin-right: 0;
@@ -668,6 +675,17 @@ input[type="checkbox"]:checked + .slider:before {
       text-align: left;
       
     }
+    
+    .activity-text {
+      text-align: left;
+      display: block;
+      }
+
+      .members-text {
+        text-align: left;
+        display: block;
+        }
+
     .members-container img,
     .activity-container img {
       width: 15%;
@@ -715,6 +733,8 @@ input[type="checkbox"]:checked + .slider:before {
       text-align: left;
       margin-right: 350px;
     }
+
+    
     
 #messageField {
   margin-top: 20px;
@@ -757,7 +777,8 @@ input[type="checkbox"]:checked + .slider:before {
         .widget-container-full.no-border-box {
           box-sizing: content-box;
         }
-
+         
+       
        
         }
 
@@ -788,6 +809,7 @@ input[type="checkbox"]:checked + .slider:before {
 
   .activity-text {
   text-align: left;
+  display: block;
   }
 
   .activity-text p:nth-child(2) {
